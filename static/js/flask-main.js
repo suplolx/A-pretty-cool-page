@@ -1,10 +1,9 @@
-//hours object aanmaken
+
 var t = new Date().getHours();
-//selecteren van HTML elements
+
 var greetMessage = document.getElementById("greeting-message");
 var memes = document.getElementById("main-body");
 
-//getHours vergelijken met uren voor gepaste begroeting
 if ((t >= 0) && (t <= 5)) {
   greetMessage.innerHTML = 'Good night, <span class="primary-text">Hans</span>';
 } else if ((t >= 6) && (t <= 11)) {
