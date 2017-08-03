@@ -70,7 +70,6 @@ select {
   font-size: 50px;
   margin:0;
   padding-bottom:30px;
-  border-bottom: 1px solid #f4f4f4;
 }
 
 #showcase p {
@@ -198,7 +197,7 @@ select {
 
 @media(max-width:880px){
   #showcase h1 {
-    font-size:30px;
+    font-size:35px;
     border-bottom:0
   }
 }

@@ -7,8 +7,12 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
-    return render_template('welcome.html')
+@app.route('/<name>')
+def index(name=None):
+    if name == None:
+        return render_template('welcome.html')
+    else:
+        return render_template('welcome.html', name=name.capitalize())
 
 
 @app.route('/birbs')
@@ -25,4 +29,4 @@ def get_javascript_data(jsdata):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0')

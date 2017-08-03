@@ -5,13 +5,13 @@ var greetMessage = document.getElementById("greeting-message");
 var memes = document.getElementById("main-body");
 
 if ((t >= 0) && (t <= 5)) {
-  greetMessage.innerHTML = 'Good night, <span class="primary-text">Hans</span>';
+  greetMessage.innerHTML = 'Good night';
 } else if ((t >= 6) && (t <= 11)) {
-  greetMessage.innerHTML = 'Good morning, <span class="primary-text">Hans</span>';
+  greetMessage.innerHTML = 'Good morning';
 } else if ((t >= 12) && (t <= 17)) {
-  greetMessage.innerHTML = 'Good afternoon, <span class="primary-text">Hans</span>';
+  greetMessage.innerHTML = 'Good afternoon';
 } else if ((t >= 18) && (t <= 23)) {
-  greetMessage.innerHTML = 'Good evening, <span class="primary-text">Hans</span>';
+  greetMessage.innerHTML = 'Good evening';
 } else {
-  greetMessage.innerHTML = 'Good night, <span class="primary-text">Hans</span>';
+  greetMessage.innerHTML = 'Good night';
 }
