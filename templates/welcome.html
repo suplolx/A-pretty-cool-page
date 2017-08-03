@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/flask-flexboxgrid.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/flask-font-awesome.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon"/>
+  <link id="theme" rel="stylesheet" href="{{ url_for('static', filename='css/flask-custom.css') }}">
+  <title>Welcome | Homepage</title>
+</head>
+<body id="main-body">
+
+  <header id="main-header">
+    <div class="container">
+      <div class="row end-sm end-md end-lg center-xs middle-sm middle-md middle-lg">
+        <div class="col-xs-12 col-sm-4 col-md-5 col-lg-4">
+          <h1><span class="primary-text">A Pretty Cool </span>Page  <a id="theme-button" href="javascript:void(0)"><i id="theme-icon" class="fa fa-sun-o"></i></a></h1>
+            <script type="text/javascript" src="{{ url_for('static', filename='js/flask-themes-switch.js') }}"></script>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-7 col-lg-8">
+          <nav id="navbar">
+            <ul>
+              <li class="current"><a href="#">Home</a></li>
+              <li><a href="/birbs">Jeff & Gabe</a></li>
+              <li><a href="#">TBA</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <div class="container">
+      <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+
+        <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
+          <h1 id="greeting-message">Good morning, <span class="primary-text">Hans</span></h1>
+          <p><span id="current-temp"></span><img id="current-icon" src=""></p>
+          <p><span id="max-temp"></span><span id="min-temp"></span></p>
+          <p id="description"></p>
+          <p id="summary"></p>
+          <a href="javascript:void(0)"><i id="gps-btn" class="fa fa-map-marker"></i></a>
+          <footer id="darksky-footer">Powered by <a href="https://darksky.net/poweredby/">Dark Sky API</a></footer>
+        </div>
+        <!--
+        <div id="showcase-content-no-location" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
+          <h1 id="greeting-message">Good morning, <span class="primary-text">Hans</span></h1>
+          <input type="text" name="" value=""><br>
+          <input type="text" name="" value="">
+
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="row center-xs center-sm center-md center-lg">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h2>Unit Converters</h2>
+          <div class="row center-xs center-sm center-md center-lg convert-row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 convert-container">
+              <i class="fa fa-thermometer"></i><br>
+              <h4>Temperature</h4>
+              <input id="temp-input" type="number" name="Celsius" placeholder="Celsius">
+              <select name="units" id="select-temp-unit">
+                <option value="Celsius">°C to °F</option>
+                <option value="Fahrenheit">°F to °C</option>
+              </select><br>
+              <p id="temp-convert">°F</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 convert-container">
+              <i class="fa fa-pie-chart"></i><br>
+              <h4>Weight</h4>
+              <input id="weight-input" type="number" name="Kilogram" placeholder="Kilogram">
+              <select name="units" id="select-weight-unit">
+                <option value="Kilogram">Kilogram to pounds/ounce</option>
+                <option value="Pounds">Pounds to kilogram/ounce</option>
+                <option value="Ounce">Ounce to kilogram & pounds</option>
+              </select><br>
+              <p id="weight-convert-lbs">lbs</p>
+              <p id="weight-convert-oz">oz</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 convert-container">
+              <i class="fa fa-arrows-h"></i><br>
+              <h4>Length</h4>
+              <input id="length-input" type="number" name="Meter" placeholder="Meter">
+              <select name="units" id="select-length-unit">
+                <option value="Meter">Meter to feet</option>
+                <option value="Feet">Feet to meter</option>
+              </select><br>
+              <p id="length-convert">ft</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="main-footer">
+    <div class="container">
+      <div class="row center-xs center-sm center-md center-lg">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>Copyright &copy; Hans Beijk</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/flask-weather-server.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/flask-main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/flask-converters.js') }}"></script>
+
+</html>
