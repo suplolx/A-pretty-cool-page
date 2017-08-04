@@ -1,9 +1,10 @@
-
+//date object for comparison
 var t = new Date().getHours();
 
+//selecting HTML element
 var greetMessage = document.getElementById("greeting-message");
-var memes = document.getElementById("main-body");
 
+//compare morning/afternoon/evening/night hours with date object
 if ((t >= 0) && (t <= 5)) {
   greetMessage.innerHTML = 'Good night';
 } else if ((t >= 6) && (t <= 11)) {

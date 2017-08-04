@@ -5,8 +5,9 @@ from secret import API_KEY
 
 app = Flask(__name__)
 
-
+#homepage route
 @app.route('/')
+#name route to test passing variabls to HTML
 @app.route('/<name>')
 def index(name=None):
     if name == None:
@@ -14,12 +15,12 @@ def index(name=None):
     else:
         return render_template('welcome.html', name=name.capitalize())
 
-
+#second page route
 @app.route('/birbs')
 def birbs():
     return render_template('birbs.html')
 
-
+#route to get location data from AJAX request
 @app.route('/getmethod/<jsdata>')
 def get_javascript_data(jsdata):
     lat, lon = jsdata.split(',')
