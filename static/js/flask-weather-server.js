@@ -39,7 +39,40 @@ function getWeather(lat, lon) {
     minTemp.innerHTML = `Min ${Math.round(Number(data.daily.data[0].temperatureMin))}°C`;
     description.innerHTML = data.currently.summary;
     summary.innerHTML = data.hourly.summary;
-    showcase.style.visibility = 'visible';
+
+    let weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+    for (let i = 1; i <= 5; i++) {
+
+      let ts = new Date(Number(data.daily.data[i].time * 1000)).getDay();
+      let cellHeader = document.createElement("th");
+      let cellHeaderText = document.createTextNode(weekDays[ts]);
+
+      cellHeader.appendChild(cellHeaderText);
+      headerRow.appendChild(cellHeader);
+
+      let cell = document.createElement("td");
+      let cellImage = document.createElement('IMG');
+
+      cellImage.setAttribute("src", `./static/img/${data.daily.data[i].icon}.png`);
+
+      cell.appendChild(cellImage);
+      iconRow.appendChild(cell);
+
+
+      let cellMax = document.createElement("td");
+  		let cellMaxText = document.createTextNode(Math.round(Number(data.daily.data[i].temperatureMax)) + "°C");
+
+  		cellMax.appendChild(cellMaxText);
+  		maxTempRow.appendChild(cellMax);
+
+      let cellMin = document.createElement("td");
+  		let cellMinText = document.createTextNode(Math.round(Number(data.daily.data[i].temperatureMin)) + "°C") ;
+
+  		cellMin.appendChild(cellMinText);
+  		minTempRow.appendChild(cellMin);
+    }
+
   };
 
   weatherRequest.send();
@@ -58,12 +91,18 @@ var maxTemp = document.getElementById('max-temp');
 var minTemp = document.getElementById('min-temp');
 var description = document.getElementById('description');
 var summary = document.getElementById('summary');
-var showcase = document.getElementById('showcase-content');
-var gpsBtn = document.getElementById('gps-btn');
+//var gpsBtn = document.getElementById('gps-btn');
+var headerRow = document.getElementById('header-row');
+var iconRow = document.getElementById('icon-row');
+var maxTempRow = document.getElementById('max-temp-row');
+var minTempRow = document.getElementById('min-temp-row');
 
+
+/*
 //event listener for GPS button to get current location from device
 gpsBtn.addEventListener('click', function() {
   navigator.geolocation.getCurrentPosition(succes, error)});
+*/
 
 //checking if location is already stored in local storage of the device
 if (localStorage.getItem("locations") === null) {

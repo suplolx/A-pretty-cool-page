@@ -1,7 +1,8 @@
 from flask import Flask, render_template
+from secret import API_KEY
 import requests
 import json
-from secret import API_KEY
+
 
 app = Flask(__name__)
 

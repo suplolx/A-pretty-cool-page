@@ -32,28 +32,53 @@
     </div>
   </header>
 
-  <section id="showcase">
-    <div class="container">
-      <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+  <section id="showcase" class="showcase">
+    <div id="item-1" class="item">
+      <div class="container">
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
 
-        <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
-          <h1 id="greeting-message"></h1><h1 class="primary-text">{{ name }}</h1>
-          <hr>
-          <p><span id="current-temp"></span><img id="current-icon" src=""></p>
-          <p><span id="max-temp"></span><span id="min-temp"></span></p>
-          <p id="description"></p>
-          <p id="summary"></p>
-          <a href="javascript:void(0)"><i id="gps-btn" class="fa fa-map-marker"></i></a>
-          <footer id="darksky-footer">Powered by <a href="https://darksky.net/poweredby/">Dark Sky API</a></footer>
+          <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
+            <h1 id="greeting-message"></h1><h1 class="primary-text">{{ name }}</h1>
+            <hr>
+            <div class="weather1">
+              <p><span id="current-temp"></span><img id="current-icon" src=""></p>
+              <p><span id="max-temp"></span><span id="min-temp"></span></p>
+              <p id="description"></p>
+              <p id="summary"></p>
+            </div>
+            <a href="javascript:void(0)"><i id="gps-btn" class="fa fa-map-marker"></i></a>
+            <footer id="darksky-footer">Powered by <a href="https://darksky.net/poweredby/">Dark Sky API</a></footer>
+          </div>
         </div>
-        <!--
-        <div id="showcase-content-no-location" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
-          <h1 id="greeting-message">Good morning, <span class="primary-text">Hans</span></h1>
-          <input type="text" name="" value=""><br>
-          <input type="text" name="" value="">
+      </div>
+    </div>
 
+    <div id="item-2" class="item-active">
+      <div class="container">
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+
+          <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
+            <h1 id="greeting-message">5 day forecast</h1>
+            <hr>
+            <div class="weather2">
+              <table>
+                <tr id="header-row">
+
+                </tr>
+                <tr id="icon-row">
+                  
+                </tr>
+                <tr id="max-temp-row">
+
+                </tr>
+                <tr id="min-temp-row">
+
+                </tr>
+              </table>
+            </div>
+            <footer id="darksky-footer">Powered by <a href="https://darksky.net/poweredby/">Dark Sky API</a></footer>
+          </div>
         </div>
-        -->
       </div>
     </div>
   </section>
