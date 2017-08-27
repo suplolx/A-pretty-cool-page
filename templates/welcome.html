@@ -33,11 +33,22 @@
   </header>
 
   <section id="showcase" class="showcase">
-    <div id="item-1" class="item">
+    <div id="item-1" class="item-active" onclick="switchPanelOne();">
       <div class="container">
         <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
 
-          <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
+          <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content" onclick="switchPanelOne();">
+          <script>
+            function switchPanelOne() {
+              item1 = document.getElementById("item-1");
+              item2 = document.getElementById("item-2");
+
+              item1.classList.add("item");
+              item1.classList.remove("item-active");
+              item2.classList.add("item-active");
+              item2.classList.remove("item");
+            }
+          </script>
             <h1 id="greeting-message"></h1><h1 class="primary-text">{{ name }}</h1>
             <hr>
             <div class="weather1">
@@ -53,26 +64,33 @@
       </div>
     </div>
 
-    <div id="item-2" class="item-active">
+    <div id="item-2" class="item" onclick="switchPanelTwo();">
       <div class="container">
         <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
 
-          <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
+          <div id="showcase-content" class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content" onclick="switchPanelTwo();">
+          <script>
+            function switchPanelTwo() {
+              item1 = document.getElementById("item-1");
+              item2 = document.getElementById("item-2");
+
+              item2.classList.add("item");
+              item2.classList.remove("item-active");
+              item1.classList.add("item-active");
+              item1.classList.remove("item");
+            }
+          </script>
             <h1 id="greeting-message">5 day forecast</h1>
             <hr>
             <div class="weather2">
               <table>
                 <tr id="header-row">
-
                 </tr>
                 <tr id="icon-row">
-                  
                 </tr>
                 <tr id="max-temp-row">
-
                 </tr>
                 <tr id="min-temp-row">
-
                 </tr>
               </table>
             </div>
